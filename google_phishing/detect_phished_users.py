@@ -47,7 +47,7 @@ def retrieve_authorizations_for_client(service_account_json,
             list(applicationName="token",
                  userKey="all",
                  eventName="authorize",
-                 nextPageToken=activity_response.get("nextPageToken"),
+                 pageToken=activity_response.get("nextPageToken"),
                  startTime=start_time).execute()
         check_if_client_id_authorized(activity_response.get("items"), client_id)
 
